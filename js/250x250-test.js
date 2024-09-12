@@ -45,7 +45,7 @@ $(document).click(function(event) {
 
 searchInputFromRef.on( "input", function(e) {
   const { value } = e.target;
-  searchInputFromRef.empty();
+  autoCompleteFromRef.empty();
   searchInputToRef.attr("disabled", "true");
   from = null;
 
