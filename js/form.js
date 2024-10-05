@@ -87,7 +87,11 @@ $("#submitBtn").click(function(event) {
   }
 
   $(".search-input").attr("data-touched", "true")
-  console.log(from, to);
+
+  if (from && to) {
+    const url = `https://de.gotogate.com/rf/destination?from=${from}&to=${to}&text=9&utm_source=blue&utm_medium=cpc&utm_campaign=DE_gotogate.com_tgrp25&domain=blue&campaign=remarketing-blue_DE_tgrp25`;
+    window.location = url;
+  }
 });
 
 autoCompleteFromRef.on("click", "li", function(e) {
@@ -137,6 +141,3 @@ autoCompleteToRef.on("click", "li", function(e) {
 
   filteredDestiny = destiny.filter((item) => item.label.toLowerCase().includes(value.label.toLowerCase()));
 });
-
-const a = 'https://de.gotogate.com/?utm_source=blue&utm_medium=cpa&utm_campaign=DE_gotogate.com&domain=blue&campaign=remarketing-blue'
-const b = 'https://de.gotogate.com/rf/destination?from=ZAD&to=CGN&text=9&utm_source=blue&utm_medium=cpc&utm_campaign=DE_gotogate.com_tgrp25&domain=blue&campaign=remarketing-blue_DE_tgrp25'
